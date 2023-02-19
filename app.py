@@ -40,9 +40,12 @@ with col2:
 
 st.text('')
 if st.button("Predict FP / Confirmed exoplanets"):
-    result = predict(
+    result, probability = predict(
         np.array([[sepal_l, sepal_w, petal_l, petal_w]]))
     if result[0] == "FP":
         st.text(f"{result[0]}: False posetive transit")
+        st.text(f"probability: {probability[0][1]} (0 to 1)")
     else:
         st.text(f"{result[0]}: Confimed !")
+        st.text(f"probability: {probability[0][0]} (0 to 1)")
+
