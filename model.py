@@ -24,8 +24,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.3, random_state=seed, stratify=y)
 
 # create an instance of the random forest classifier
-clf = RandomForestClassifier(n_estimators=100) 
-
+clf = RandomForestClassifier(n_estimators=100)
 
 
 # train the classifier on the training data
