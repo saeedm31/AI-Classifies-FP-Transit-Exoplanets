@@ -1,4 +1,4 @@
-# AI-Classifies-FP-Transit-Exoplanets
+# AI Classifies FP Transit Exoplanets
 
 Detect false positive transiting exoplanets based on Kepler database and Machine learning model Random Forest Classifier.
 Model trained using sklearn
