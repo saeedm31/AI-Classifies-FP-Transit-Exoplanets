@@ -6,7 +6,7 @@ from prediction import predict
 
 st.title('AI Classifies FP Transit Exoplanets')
 st.markdown('Detect false positive transiting exoplanets based on\
- their Period, Duration, Planet-Star Radius Ratio, Stellar Radius, Model train: Random Forest Classifier, Accuracy: 0.902 using Kepler database\
+ their Period, Duration, Planet-Star Radius Ratio, Stellar Radius, Model train: Random Forest Classifier, Accuracy ~ 0.902 (90 %) using Kepler database\
  \n \n ChatGPT: Machine\nlearning\nclassifiers\nhave\nbecome\nan\nincreasingly\nimportant\ntool\nin\nthe\nsearch\
  \nfor\nexoplanets.\nOne\nparticular\napplication\nis\nin\nthe\ndetection\nof\nfalse\npositive\ntransiting\nexoplanets.\
  \nFalse\npositives\ncan\narise\nwhen\nthe\nobserved\ntransit\nsignal\nis\ncaused\nby\nsomething\nother\
