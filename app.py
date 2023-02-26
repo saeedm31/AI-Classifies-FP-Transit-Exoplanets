@@ -22,7 +22,7 @@ st.markdown('Detect false positive transiting exoplanets based on\
 
 st.image(
             "https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/10648/files/2020/09/false_positive_examples.png",
-            width=400, # Manually Adjust the width of the image as per requirement
+            width=600, # Manually Adjust the width of the image as per requirement
         )
 st.markdown('This\nfigure\nshow\nthe\nvarious\npotential\nfalse\npositive\nsituations\nthat\ncould\nbe\nmistaken\nfor\nan\nexoplanet\nin\nphotometry.\nThese\nscenarios\ninclude\nexamples\nsuch\nas\nlow-mass\nstars\nand\nbrown\ndwarfs\nthat\nare\ntransiting\n(located\nin\nthe\nupper\nright),\na\nbackground\nmulti-star\nsystem\nthat\nis\npositioned\nclose\nto\nthe\ncandidate\nhost\nstar\n(located\nin\nthe\nlower\nleft),\nand\na\ngrazing\nstellar\nbinary\n(located\nin\nthe\nlower\nright).\nIn\norder\nto\nascertain\nwhether\na\ngiven\nsignal\nis\ntruly\ncaused\nby\na\nplanet\n(located\nin\nthe\nupper\nleft)\nor\na\nfake\nsystem,\nstatistical\nvalidation\nis\na\nuseful\ntool\n.\nThe\nimage\ncredit\nfor\nthis\nfigure\nis\nattributed\nto\nNASA\nAmes\n/\nW.\nStenzel.')
 
