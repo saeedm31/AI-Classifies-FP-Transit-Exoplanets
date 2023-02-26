@@ -20,6 +20,11 @@ st.markdown('Detect false positive transiting exoplanets based on\
  \npopulations\nand\ntheir\ncharacteristics,\nwhich\nhas\nsignificant\nimplications\nfor\nour\nunderstanding\nof\nthe\
  \nformation\nand\nevolution\nof\nplanetary\nsystems.')
 
+st.image(
+            "https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/10648/files/2020/09/false_positive_examples.png",
+            width=400, # Manually Adjust the width of the image as per requirement
+        )
+
 st.header("Transit Features")
 col1, col2 = st.columns(2)
 
