@@ -27,7 +27,7 @@ st.image(
 st.markdown('This\nfigure\nshow\nthe\nvarious\npotential\nfalse\npositive\nsituations\nthat\ncould\nbe\nmistaken\nfor\nan\nexoplanet\nin\nphotometry.\nThese\nscenarios\ninclude\nexamples\nsuch\nas\nlow-mass\nstars\nand\nbrown\ndwarfs\nthat\nare\ntransiting\n(located\nin\nthe\nupper\nright),\na\nbackground\nmulti-star\nsystem\nthat\nis\npositioned\nclose\nto\nthe\ncandidate\nhost\nstar\n(located\nin\nthe\nlower\nleft),\nand\na\ngrazing\nstellar\nbinary\n(located\nin\nthe\nlower\nright).\nIn\norder\nto\nascertain\nwhether\na\ngiven\nsignal\nis\ntruly\ncaused\nby\na\nplanet\n(located\nin\nthe\nupper\nleft)\nor\na\nfake\nsystem,\nstatistical\nvalidation\nis\na\nuseful\ntool\n.\nThe\nimage\ncredit\nfor\nthis\nfigure\nis\nattributed\nto\nNASA\nAmes\n/\nW.\nStenzel.')
 
 st.header("Transit Features")
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     # st.text("Transit parameters")
@@ -44,7 +44,8 @@ with col2:
         ,format="%.5f")
     petal_w = st.number_input('Stellar Radius [Solar radii]', step = 0.1, max_value = 18.0, min_value = 0.1)
 
-
+with col3:
+    option = st.selectbox("Which model would you like to use?",("Model 1", "Model 2", "Model 3"))
     
 st.text('')
 if st.button("Predict FP / Confirmed exoplanets"):
@@ -56,4 +57,7 @@ if st.button("Predict FP / Confirmed exoplanets"):
     else:
         st.text(f"{result[0]}: Confimed !")
         st.text(f"probability: {probability[0][0]} (0 to 1)")
-    
+    if option == "Model 1":
+        st.text(f"Model 1")
+    else:
+        st.text(f"Model 2")    
