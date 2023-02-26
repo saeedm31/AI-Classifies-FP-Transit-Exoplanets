@@ -45,11 +45,7 @@ with col2:
     petal_w = st.number_input('Stellar Radius [Solar radii]', step = 0.1, max_value = 18.0, min_value = 0.1)
 
 with col2:
-   option = st.selectbox(
-       "Which model would you like to use?",
-       ("Model 1", "Model 2", "Model 3"),
-       label_visibility=st.session_state.visibility,
-       disabled=st.session_state.disabled,
+    option = st.selectbox("Which model would you like to use?",("Model 1", "Model 2", "Model 3"),label_visibility=st.session_state.visibility,disabled=st.session_state.disabled,
    )
     
 st.text('')
@@ -64,6 +60,6 @@ if st.button("Predict FP / Confirmed exoplanets"):
         st.text(f"probability: {probability[0][0]} (0 to 1)")
     
     if option == "Model 1":
-       st.text(f"Model 1")
+        st.text(f"Model 1")
     else:
-       st.text(f"Model 2")
+        st.text(f"Model 2")
