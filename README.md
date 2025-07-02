@@ -1,9 +1,6 @@
-# AI Classifies FP Transit Exoplanets
+# AI Classifies False Positive Transiting Exoplanets
 
-Detect false positive transiting exoplanets based on Kepler database and Machine learning model Random Forest Classifier.
-Model trained using sklearn
-and deployed using https://streamlit.io/
+Detects false positive transiting exoplanets using the Kepler database and a machine learning model (Random Forest Classifier).
+The model is trained using scikit-learn and deployed with a user interface built using Streamlit.
 
 https://saeedm31-ai-classifies-fp-transit-exoplanets-app-sv0ltd.streamlit.app/
-
-
