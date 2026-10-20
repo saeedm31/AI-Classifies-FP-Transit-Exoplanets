@@ -6,6 +6,7 @@
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)](https://www.python.org/)
 [![scikit-learn](https://img.shields.io/badge/ML-scikit--learn-F7931E?logo=scikitlearn)](https://scikit-learn.org/)
 [![Data](https://img.shields.io/badge/Data-NASA%20Exoplanet%20Archive-0B3D91)](https://exoplanetarchive.ipac.caltech.edu/)
+[![Tests](https://github.com/saeedm31/AI-Classifies-FP-Transit-Exoplanets/actions/workflows/tests.yml/badge.svg)](https://github.com/saeedm31/AI-Classifies-FP-Transit-Exoplanets/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 👉 **[Try the live app](https://ai-classifies-fp-transit-exoplanets.streamlit.app/)**
@@ -88,8 +89,17 @@ streamlit run app.py     # opens http://localhost:8501
 ├── train.py        # Cross-validated evaluation → metrics.json
 ├── metrics.json    # Saved evaluation results shown in the app
 ├── FP_new.csv      # Labelled Kepler objects (Confirmed / FP)
+├── tests/          # Data cleaning, features, red flags, model beats baseline
 └── requirements.txt
 ```
+
+## ✅ Tests
+
+```bash
+python -m unittest
+```
+
+They run on every push (GitHub Actions) and check that duplicates and conflicting labels are removed, that the saved metrics match the data, that the red-flag rules fire correctly, and that the model beats the majority baseline on held-out data (ROC AUC > 0.9).
 
 ## ⚠️ Limitations
 
