@@ -38,6 +38,10 @@ Measured with 5-fold stratified cross-validation, so every object is scored by a
 | Planets correctly kept | 89.0% |
 | False positives correctly caught | 90.6% |
 
+![Model scores for confirmed planets and false positives, and the ROC curve](docs/results.svg)
+
+Most objects get a confident score near 0 or 1. Most mistakes have scores in the middle, so that is where a human should look first.
+
 **Why the data cleaning matters:** the raw file has 791 exact duplicate rows, mostly confirmed planets, plus 58 rows with identical measurements but different labels. Left in, copies of the same object end up in both the training and test sets and make the model look better than it is. They are removed before training and evaluation.
 
 ## 🧠 How it works
@@ -87,6 +91,7 @@ streamlit run app.py     # opens http://localhost:8501
 ├── app.py          # Streamlit app: single check, batch check, performance, data
 ├── exoclf.py       # Data cleaning, features and model (shared by app and training)
 ├── train.py        # Cross-validated evaluation → metrics.json
+├── plot_results.py # Draws docs/results.svg (score distribution + ROC curve)
 ├── metrics.json    # Saved evaluation results shown in the app
 ├── FP_new.csv      # Labelled Kepler objects (Confirmed / FP)
 ├── tests/          # Data cleaning, features, red flags, model beats baseline
